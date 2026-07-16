@@ -1,0 +1,221 @@
+[
+  { "command": "/welcomesystem welcome setup", "category": "welcome", "description": "Interactive welcome system setup wizard for the server.", "permission": "Manage Guild", "syntax": "/welcomesystem welcome setup", "example": "/welcomesystem welcome setup", "notes": "Opens a guided setup with channel and embed configuration.", "tips": "Run this once, then customize the embed with edit_embed." },
+  { "command": "/welcomesystem welcome edit_embed", "category": "welcome", "description": "Edit the welcome embed title, description, color, image and thumbnail.", "permission": "Manage Guild", "syntax": "/welcomesystem welcome edit_embed", "example": "/welcomesystem welcome edit_embed" },
+  { "command": "/welcomesystem welcome edit_options", "category": "welcome", "description": "Toggle mention on join, DM on join, delete-after and other options.", "permission": "Manage Guild", "syntax": "/welcomesystem welcome edit_options" },
+  { "command": "/welcomesystem welcome preview", "category": "welcome", "description": "Preview the current welcome embed exactly as new members will see it.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem welcome test", "category": "welcome", "description": "Fire a real test welcome message in the configured channel.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem welcome status", "category": "welcome", "description": "Show current welcome configuration & enabled state.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem welcome stats", "category": "welcome", "description": "Show welcome delivery statistics.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem welcome remove", "category": "welcome", "description": "Fully remove the welcome configuration.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave setup", "category": "welcome", "description": "Interactive leave-message setup wizard.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave edit_embed", "category": "welcome", "description": "Edit the leave embed appearance.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave edit_options", "category": "welcome", "description": "Toggle leave message options.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave preview", "category": "welcome", "description": "Preview the leave embed.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave test", "category": "welcome", "description": "Send a test leave message.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave status", "category": "welcome", "description": "Show leave-message configuration.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave stats", "category": "welcome", "description": "Show leave-message statistics.", "permission": "Manage Guild" },
+  { "command": "/welcomesystem leave remove", "category": "welcome", "description": "Remove leave message configuration.", "permission": "Manage Guild" },
+
+  { "command": "/voicelog setlog", "category": "voicelog", "description": "Set the channel where all voice punishment logs will be delivered.", "permission": "Manage Guild", "parameters": [{ "name": "channel", "type": "TextChannel", "required": true, "description": "Log destination channel." }], "example": "/voicelog setlog channel:#voice-logs" },
+  { "command": "/voicelog status", "category": "voicelog", "description": "Show current voice log configuration.", "permission": "Manage Guild" },
+
+  { "command": "/vc move", "category": "voice", "description": "Move a single member or everyone from one voice channel to another.", "permission": "Move Members", "parameters": [
+    { "name": "to_channel", "type": "VoiceChannel", "required": true, "description": "Target voice channel." },
+    { "name": "member", "type": "Member", "required": false, "description": "Specific member to move." },
+    { "name": "from_channel", "type": "VoiceChannel", "required": false, "description": "Source channel — moves everyone from here." }
+  ], "example": "/vc move to_channel:#Lounge from_channel:#AFK" },
+  { "command": "/vc mute", "category": "voice", "description": "Server-mute or unmute a member or an entire voice channel.", "permission": "Mute Members", "parameters": [
+    { "name": "action", "type": "mute | unmute", "required": true, "description": "Action to perform." },
+    { "name": "member", "type": "Member", "required": false },
+    { "name": "channel", "type": "VoiceChannel", "required": false }
+  ], "example": "/vc mute action:mute channel:#Gaming" },
+  { "command": "/vc deafen", "category": "voice", "description": "Server-deafen or undeafen members.", "permission": "Deafen Members", "parameters": [
+    { "name": "action", "type": "deafen | undeafen", "required": true },
+    { "name": "member", "type": "Member", "required": false },
+    { "name": "channel", "type": "VoiceChannel", "required": false }
+  ], "example": "/vc deafen action:deafen member:@spammer" },
+  { "command": "/vc kick", "category": "voice", "description": "Disconnect a member or every member from a voice channel.", "permission": "Move Members", "parameters": [
+    { "name": "member", "type": "Member", "required": false },
+    { "name": "channel", "type": "VoiceChannel", "required": false }
+  ], "example": "/vc kick channel:#AFK" },
+  { "command": "/vc lock", "category": "voice", "description": "Lock or unlock a voice channel to prevent new joins.", "permission": "Manage Channels", "parameters": [
+    { "name": "action", "type": "lock | unlock", "required": true },
+    { "name": "channel", "type": "VoiceChannel", "required": false }
+  ], "example": "/vc lock action:lock" },
+  { "command": "/vc info", "category": "voice", "description": "Show detailed info about a voice channel.", "permission": "View Channel", "parameters": [{ "name": "channel", "type": "VoiceChannel", "required": false }] },
+
+  { "command": "/tempvoice setup", "category": "tempvoice", "description": "Create a hub channel — joining it spawns a private temp voice for the user, deleted on empty.", "permission": "Manage Channels", "example": "/tempvoice setup" },
+
+  { "command": "/tts join", "category": "tts", "description": "Make the bot join your current voice channel for TTS playback.", "permission": "Connect" },
+  { "command": "/tts leave", "category": "tts", "description": "Disconnect the bot from voice.", "permission": "Connect" },
+  { "command": "/tts say", "category": "tts", "description": "Speak a message using the configured TTS voice.", "permission": "Speak", "parameters": [{ "name": "text", "type": "String", "required": true }], "example": "/tts say text:Welcome everyone" },
+  { "command": "/tts voice", "category": "tts", "description": "Change the TTS voice / language for the server.", "permission": "Manage Guild" },
+  { "command": "/tts role", "category": "tts", "description": "Restrict TTS to a specific role.", "permission": "Manage Guild" },
+  { "command": "/tts ignore", "category": "tts", "description": "Ignore a user or channel from TTS playback.", "permission": "Manage Guild" },
+  { "command": "/tts config", "category": "tts", "description": "View or edit the full TTS configuration.", "permission": "Manage Guild" },
+  { "command": "/tts skip", "category": "tts", "description": "Skip the current TTS message." },
+  { "command": "/tts clear", "category": "tts", "description": "Clear the TTS queue." },
+  { "command": "/tts queue", "category": "tts", "description": "Show pending messages in the TTS queue." },
+
+  { "command": "/verify setup", "category": "verify", "description": "Send the verification panel to a channel.", "permission": "Manage Guild", "example": "/verify setup" },
+  { "command": "/verify set_role", "category": "verify", "description": "Set the role granted after successful verification.", "permission": "Manage Guild", "parameters": [{ "name": "role", "type": "Role", "required": true }] },
+  { "command": "/verify set_log", "category": "verify", "description": "Set the verification log channel.", "permission": "Manage Guild", "parameters": [{ "name": "channel", "type": "TextChannel", "required": true }] },
+  { "command": "/verify set_questions", "category": "verify", "description": "Change the questions shown in the verification modal.", "permission": "Manage Guild" },
+  { "command": "/verify status", "category": "verify", "description": "Show current verification configuration & stats." },
+  { "command": "/verify reset", "category": "verify", "description": "Strip the verified role from a member and force them to re-verify.", "permission": "Manage Guild", "parameters": [{ "name": "member", "type": "Member", "required": true }] },
+  { "command": "/verify blacklist", "category": "verify", "description": "Blacklist or un-blacklist a member from verification.", "permission": "Manage Guild" },
+  { "command": "/verify blacklist_list", "category": "verify", "description": "List every blacklisted member." },
+  { "command": "/verify force", "category": "verify", "description": "Manually mark a member as verified.", "permission": "Manage Guild" },
+  { "command": "/verify stats", "category": "verify", "description": "Verification statistics for the server." },
+  { "command": "/verify unverified", "category": "verify", "description": "List members who have not yet verified." },
+
+  { "command": "/utility avatar", "category": "utility", "description": "Show a member's avatar in full quality with a direct download button.", "parameters": [{ "name": "member", "type": "Member", "required": false }] },
+  { "command": "/utility userinfo", "category": "utility", "description": "Show a user's Discord ID, account creation date, join date and top 10 roles." },
+  { "command": "/utility serverinfo", "category": "utility", "description": "Show server owner, creation date, member & bot counts, channels and boost level." },
+  { "command": "/utility roleinfo", "category": "utility", "description": "Analyze a role — ID, position, mentionable and member count.", "parameters": [{ "name": "role", "type": "Role", "required": true }] },
+  { "command": "/utility poll", "category": "utility", "description": "Create a professional poll with up to 4 options and auto-reactions." },
+  { "command": "/utility remind", "category": "utility", "description": "Set a reminder that pings you after N minutes." },
+  { "command": "/utility afk", "category": "utility", "description": "Mark yourself AFK — the bot replies to mentions until you speak again." },
+  { "command": "/utility ping", "category": "utility", "description": "Show the bot's current gateway latency in ms." },
+  { "command": "/utility banner", "category": "utility", "description": "Show a user's profile banner image." },
+  { "command": "/utility emojiinfo", "category": "utility", "description": "Extract the name, ID and source URL of any custom emoji." },
+  { "command": "/utility channelinfo", "category": "utility", "description": "Show a channel's ID, type, slow-mode and topic." },
+  { "command": "/utility inviteinfo", "category": "utility", "description": "Analyze a Discord invite link — server, inviter, member count and expiry." },
+  { "command": "/utility servericon", "category": "utility", "description": "Show the server's icon in HD." },
+  { "command": "/utility serverbanner", "category": "utility", "description": "Show the server's banner in HD." },
+  { "command": "/utility snowflake", "category": "utility", "description": "Decode a Discord Snowflake ID into its exact creation timestamp." },
+  { "command": "/utility timestamp", "category": "utility", "description": "Generate a copy-pasteable Discord timestamp code from a date." },
+  { "command": "/utility qr", "category": "utility", "description": "Convert any text or URL into a scannable QR code image." },
+  { "command": "/utility translate", "category": "utility", "description": "Translate text to any language using Google Translate." },
+
+  { "command": "/settings prefix", "category": "settings", "description": "Change the bot's text prefix (max 5 characters).", "permission": "Manage Guild" },
+  { "command": "/settings log", "category": "settings", "description": "Store the log channel in the database.", "permission": "Manage Guild" },
+  { "command": "/settings ticket", "category": "settings", "description": "Store the ticket category ID.", "permission": "Manage Guild" },
+
+  { "command": "/security setup", "category": "security", "description": "Configure the master security system.", "permission": "Administrator", "parameters": [
+    { "name": "status", "type": "Enable | Disable", "required": true },
+    { "name": "admin_role", "type": "Role", "required": false, "description": "Security bypass role." },
+    { "name": "link_role", "type": "Role", "required": false, "description": "Role allowed to post links." },
+    { "name": "media_role", "type": "Role", "required": false, "description": "Role allowed to post images/video." },
+    { "name": "log_channel", "type": "TextChannel", "required": false }
+  ] },
+  { "command": "/security whitelist", "category": "security", "description": "Manage the protected-role whitelist.", "permission": "Administrator", "parameters": [
+    { "name": "action", "type": "Add | Remove", "required": true },
+    { "name": "role", "type": "Role", "required": true }
+  ] },
+  { "command": "/security status", "category": "security", "description": "Show current security configuration.", "permission": "Administrator" },
+
+  { "command": "/purge all", "category": "purge", "description": "Delete N messages of any type.", "permission": "Manage Messages", "example": "/purge all amount:50" },
+  { "command": "/purge user", "category": "purge", "description": "Delete messages from a specific member.", "permission": "Manage Messages" },
+  { "command": "/purge bot", "category": "purge", "description": "Delete only bot messages." , "permission": "Manage Messages"},
+  { "command": "/purge links", "category": "purge", "description": "Delete messages that contain links.", "permission": "Manage Messages" },
+  { "command": "/purge images", "category": "purge", "description": "Delete messages with images / files / attachments.", "permission": "Manage Messages" },
+  { "command": "/purge embeds", "category": "purge", "description": "Delete embed messages.", "permission": "Manage Messages" },
+  { "command": "/purge mentions", "category": "purge", "description": "Delete messages with @user / @role / @everyone mentions.", "permission": "Manage Messages" },
+  { "command": "/purge contains", "category": "purge", "description": "Delete messages containing a specific word.", "permission": "Manage Messages" },
+  { "command": "/purge before", "category": "purge", "description": "Delete messages before a given Message ID.", "permission": "Manage Messages" },
+  { "command": "/purge between", "category": "purge", "description": "Delete every message between two Message IDs.", "permission": "Manage Messages" },
+  { "command": "/purge silent", "category": "purge", "description": "Purge without a public confirmation message.", "permission": "Manage Messages" },
+
+  { "command": "/tag setup", "category": "tag", "description": "Set the Nickname Tag/Prefix applied to new members.", "permission": "Manage Nicknames" },
+  { "command": "/tag toggle", "category": "tag", "description": "Enable or disable the Auto Nickname Tag system.", "permission": "Manage Nicknames" },
+  { "command": "/tag remove", "category": "tag", "description": "Remove the tag from a specific member's nickname.", "permission": "Manage Nicknames" },
+  { "command": "/tag massapply", "category": "tag", "description": "Apply the tag to every member in the server.", "permission": "Manage Nicknames", "warning": "Rate-limited by Discord — may take several minutes on large servers." },
+  { "command": "/tag status", "category": "tag", "description": "Show current tag configuration." },
+
+  { "command": "/logs setup", "category": "logs", "description": "Configure a dedicated log channel per event type (kick, ban, timeout, nickname, avatar, voice, roles, channels, permissions).", "permission": "Manage Guild", "parameters": [
+    { "name": "action", "type": "kick | ban | timeout | nickname | global_avatar | server_avatar | v_mute | v_deaf | v_disconnect | role_add | role_remove | role_edit | chan_create | chan_edit | chan_delete | chan_perm", "required": true },
+    { "name": "channel", "type": "TextChannel", "required": true }
+  ], "example": "/logs setup action:ban channel:#mod-logs" },
+  { "command": "/logs set_edit", "category": "logs", "description": "Set the channel that receives message-edit logs.", "permission": "Manage Guild" },
+  { "command": "/logs set_delete", "category": "logs", "description": "Set the channel that receives message-delete logs.", "permission": "Manage Guild" },
+  { "command": "/logs status", "category": "logs", "description": "Show current log configuration." },
+  { "command": "/logs disable", "category": "logs", "description": "Fully disable message logging.", "permission": "Manage Guild" },
+
+  { "command": "/ticket setup", "category": "ticket", "description": "Configure ticket category, staff role and log channel.", "permission": "Manage Guild" },
+  { "command": "/ticket panel", "category": "ticket", "description": "Send the ticket-creation panel (with button) to a channel.", "permission": "Manage Guild" },
+  { "command": "/ticket add", "category": "ticket", "description": "Add a member to the current ticket channel.", "permission": "Manage Channels" },
+  { "command": "/ticket remove", "category": "ticket", "description": "Remove a member from the current ticket channel.", "permission": "Manage Channels" },
+
+  { "command": "/invite setup", "category": "invite", "description": "Configure the invite tracker — join log, welcome DM & invite log.", "permission": "Manage Guild" },
+  { "command": "/invite status", "category": "invite", "description": "Show current invite tracker configuration." },
+  { "command": "/invite leaderboard", "category": "invite", "description": "Show the top inviters in the server." },
+  { "command": "/invite info", "category": "invite", "description": "Show a member's invite stats." },
+  { "command": "/invite export", "category": "invite", "description": "Export invite data as a CSV file.", "permission": "Manage Guild" },
+  { "command": "/invite reset", "category": "invite", "description": "Reset invite data for one member or all members.", "permission": "Manage Guild", "warning": "This action cannot be undone." },
+  { "command": "/invite server", "category": "invite", "description": "Show a server-wide invite snapshot." },
+  { "command": "/invite refresh", "category": "invite", "description": "Refresh server info & invite cache.", "permission": "Manage Guild" },
+  { "command": "/invite config", "category": "invite", "description": "Show the current configuration." },
+  { "command": "/invite welcome", "category": "invite", "description": "Set or edit the welcome DM sent to invitees.", "permission": "Manage Guild" },
+  { "command": "/invite disable", "category": "invite", "description": "Disable the invite tracker.", "permission": "Manage Guild" },
+
+  { "command": "/announce send", "category": "announce", "description": "Send an embed announcement via a modal (title, message, footer, image, role ping).", "permission": "Manage Guild", "parameters": [
+    { "name": "channel", "type": "TextChannel", "required": true },
+    { "name": "color", "type": "Blue | Green | Red | Yellow | Purple | Orange", "required": true },
+    { "name": "ping_role", "type": "Role", "required": false },
+    { "name": "image_url", "type": "URL", "required": false }
+  ] },
+  { "command": "/announce dm", "category": "announce", "description": "Broadcast a DM to every member of the server. Shows sent/failed totals.", "permission": "Administrator", "warning": "May be rate-limited — do not spam." },
+  { "command": "/announce quick", "category": "announce", "description": "Send a quick embed announcement immediately.", "permission": "Manage Guild", "parameters": [
+    { "name": "channel", "type": "TextChannel", "required": true },
+    { "name": "message", "type": "String", "required": true },
+    { "name": "ping", "type": "@everyone | @here | No Ping", "required": true }
+  ] },
+  { "command": "/announce schedule", "category": "announce", "description": "Schedule an announcement to send after N minutes.", "permission": "Manage Guild", "example": "/announce schedule channel:#announcement message:Server Maintenance minutes_from_now:30" },
+  { "command": "/announce list", "category": "announce", "description": "List every currently scheduled announcement." },
+  { "command": "/announce cancel", "category": "announce", "description": "Cancel a scheduled announcement by its ID.", "permission": "Manage Guild", "parameters": [{ "name": "ann_id", "type": "String", "required": true }] },
+  { "command": "/announce channel", "category": "announce", "description": "Set the default announcement channel.", "permission": "Manage Guild" },
+
+  { "command": "/antiraid setup", "category": "antiraid", "description": "Configure the Anti-Raid system.", "permission": "Administrator", "parameters": [
+    { "name": "enabled", "type": "Boolean", "required": true },
+    { "name": "log_channel", "type": "TextChannel", "required": true },
+    { "name": "join_limit", "type": "Integer", "required": true, "description": "Joins that trigger raid mode." },
+    { "name": "join_interval", "type": "Integer (seconds)", "required": true },
+    { "name": "min_account_age", "type": "Integer (days)", "required": true },
+    { "name": "action", "type": "Kick | Ban | Timeout", "required": true },
+    { "name": "lockdown_on_raid", "type": "Boolean", "required": true }
+  ], "example": "/antiraid setup enabled:True log_channel:#logs join_limit:10 join_interval:10 min_account_age:3 action:kick lockdown_on_raid:True" },
+  { "command": "/antiraid lockdown", "category": "antiraid", "description": "Manually lock or unlock every text channel.", "permission": "Administrator", "parameters": [{ "name": "action", "type": "on | off", "required": true }] },
+  { "command": "/antiraid status", "category": "antiraid", "description": "Show the current Anti-Raid configuration & live state." },
+  { "command": "/antiraid reset", "category": "antiraid", "description": "Reset raid mode — clears counters & lock status.", "permission": "Administrator" },
+
+  { "command": "/antispam setup", "category": "antispam", "description": "Configure the Anti-Spam system.", "permission": "Administrator", "parameters": [
+    { "name": "enabled", "type": "Boolean", "required": true },
+    { "name": "log_channel", "type": "TextChannel", "required": true },
+    { "name": "msg_limit", "type": "Integer", "required": true },
+    { "name": "msg_interval", "type": "Integer (seconds)", "required": true },
+    { "name": "mention_limit", "type": "Integer", "required": true },
+    { "name": "duplicate_limit", "type": "Integer", "required": true },
+    { "name": "action", "type": "Warn | Timeout | Kick", "required": true },
+    { "name": "timeout_duration", "type": "Integer (minutes)", "required": true }
+  ] },
+  { "command": "/antispam status", "category": "antispam", "description": "Show the current Anti-Spam configuration." },
+  { "command": "/antispam reset", "category": "antispam", "description": "Reset a member's spam warning counter.", "permission": "Manage Messages", "parameters": [{ "name": "member", "type": "Member", "required": true }] },
+
+  { "command": "/autorole setup", "category": "autorole", "description": "Set the role auto-assigned when a new member joins.", "permission": "Manage Roles", "parameters": [{ "name": "role", "type": "Role", "required": true }] },
+  { "command": "/autorole status", "category": "autorole", "description": "Show current auto-role & log channel status." },
+  { "command": "/autorole remove", "category": "autorole", "description": "Disable the auto-role system (does not remove existing roles).", "permission": "Manage Roles" },
+  { "command": "/autorole log", "category": "autorole", "description": "Set the log channel used when auto-role assigns a role.", "permission": "Manage Roles", "parameters": [{ "name": "channel", "type": "TextChannel", "required": true }] },
+
+  { "command": "/botprofile avatar", "category": "botprofile", "description": "Set a per-server avatar for the bot.", "permission": "Manage Guild", "parameters": [{ "name": "image", "type": "PNG | JPG | JPEG | WEBP (max 8MB)", "required": true }] },
+  { "command": "/botprofile banner", "category": "botprofile", "description": "Set a per-server banner for the bot.", "permission": "Manage Guild", "parameters": [{ "name": "image", "type": "PNG | JPG | JPEG | WEBP (max 8MB)", "required": true }] },
+  { "command": "/botprofile remove-avatar", "category": "botprofile", "description": "Remove the server-specific avatar (reverts to global).", "permission": "Manage Guild" },
+  { "command": "/botprofile remove-banner", "category": "botprofile", "description": "Remove the server-specific banner (reverts to global).", "permission": "Manage Guild" },
+  { "command": "/botprofile status", "category": "botprofile", "description": "Show the bot's current avatar & banner in this server." },
+
+  { "command": "/keyword add", "category": "keyword", "description": "Add a new keyword-to-link auto reply.", "permission": "Manage Guild", "parameters": [
+    { "name": "keyword", "type": "String", "required": true },
+    { "name": "link", "type": "URL", "required": true },
+    { "name": "match_type", "type": "exact | contains", "required": true }
+  ] },
+  { "command": "/keyword remove", "category": "keyword", "description": "Remove a keyword.", "permission": "Manage Guild", "parameters": [{ "name": "keyword", "type": "String", "required": true }] },
+  { "command": "/keyword list", "category": "keyword", "description": "List every configured keyword and its link." },
+
+  { "command": "/automod setup", "category": "automod", "description": "Enable / disable AutoMod and set an optional log channel.", "permission": "Manage Guild" },
+  { "command": "/automod status", "category": "automod", "description": "Show whether AutoMod is on, blocked-word count and total violations." },
+  { "command": "/automod word add", "category": "automod", "description": "Add a new blocked word to the AutoMod blocklist.", "permission": "Manage Guild" },
+  { "command": "/automod word remove", "category": "automod", "description": "Remove a blocked word.", "permission": "Manage Guild" },
+  { "command": "/automod word list", "category": "automod", "description": "Show the full list of blocked words." },
+  { "command": "/automod violation list", "category": "automod", "description": "Show the leaderboard of top violators." },
+  { "command": "/automod violation reset", "category": "automod", "description": "Reset a specific member's violation count.", "permission": "Manage Guild", "parameters": [{ "name": "member", "type": "Member", "required": true }] }
+]

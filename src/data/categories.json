@@ -1,0 +1,23 @@
+[
+  { "slug": "welcome", "name": "Welcome & Leave", "icon": "PartyPopper", "description": "Customize member join & leave experiences with beautiful embeds.", "color": "from-pink-500 to-purple-500" },
+  { "slug": "voice", "name": "Voice Manager", "icon": "Volume2", "description": "Manage server voice channels — move, mute, deafen, kick and lock.", "color": "from-indigo-500 to-blue-500" },
+  { "slug": "voicelog", "name": "Voice Punish Log", "icon": "MicOff", "description": "Log voice punishments across your server.", "color": "from-fuchsia-500 to-pink-500" },
+  { "slug": "tempvoice", "name": "Temp Voice", "icon": "Radio", "description": "Auto-create temporary voice channels for members.", "color": "from-cyan-500 to-blue-500" },
+  { "slug": "tts", "name": "Voice TTS", "icon": "Speech", "description": "Text-to-Speech announcements inside voice channels.", "color": "from-purple-500 to-indigo-500" },
+  { "slug": "verify", "name": "Verification", "icon": "ShieldCheck", "description": "Human verification with modal questions & blacklists.", "color": "from-emerald-500 to-teal-500" },
+  { "slug": "utility", "name": "Utility", "icon": "Wrench", "description": "Everyday utility commands — avatars, info, polls, translate, QR.", "color": "from-blue-500 to-cyan-500" },
+  { "slug": "settings", "name": "Settings", "icon": "Settings", "description": "Configure bot prefix, log channel & ticket category.", "color": "from-slate-500 to-zinc-500" },
+  { "slug": "security", "name": "Security", "icon": "Shield", "description": "Master server security — role protection, links & media control.", "color": "from-red-500 to-orange-500" },
+  { "slug": "purge", "name": "Purge (Advanced)", "icon": "Trash2", "description": "Advanced message cleanup with 11 targeted filters.", "color": "from-rose-500 to-red-500" },
+  { "slug": "tag", "name": "Nickname Tag", "icon": "Tag", "description": "Auto-apply prefix/tag to new members' nicknames.", "color": "from-amber-500 to-orange-500" },
+  { "slug": "logs", "name": "Logging", "icon": "ScrollText", "description": "Full server audit logs — messages, roles, channels, moderation.", "color": "from-yellow-500 to-amber-500" },
+  { "slug": "ticket", "name": "Tickets", "icon": "Ticket", "description": "Ticket panel & staff management system.", "color": "from-violet-500 to-purple-500" },
+  { "slug": "invite", "name": "Invite Tracker", "icon": "UserPlus", "description": "Track invites, leaderboards, welcome DMs & exports.", "color": "from-green-500 to-emerald-500" },
+  { "slug": "announce", "name": "Announcement", "icon": "Megaphone", "description": "Send, schedule & broadcast announcements with embeds.", "color": "from-orange-500 to-red-500" },
+  { "slug": "antiraid", "name": "Anti-Raid", "icon": "ShieldAlert", "description": "Auto-detect raids with lockdown & punishment actions.", "color": "from-red-600 to-rose-600" },
+  { "slug": "antispam", "name": "Anti-Spam", "icon": "Ban", "description": "Message flood, mention & duplicate protection.", "color": "from-orange-600 to-red-500" },
+  { "slug": "autorole", "name": "Auto Role", "icon": "UserCog", "description": "Auto-assign a role to every new member on join.", "color": "from-teal-500 to-cyan-500" },
+  { "slug": "botprofile", "name": "Bot Profile", "icon": "BadgeCheck", "description": "Per-server bot avatar & banner customization.", "color": "from-sky-500 to-blue-500" },
+  { "slug": "keyword", "name": "Keyword System", "icon": "Link2", "description": "Auto-reply with links when configured keywords are typed.", "color": "from-lime-500 to-emerald-500" },
+  { "slug": "automod", "name": "AutoMod", "icon": "Bot", "description": "Blocklist bad words, track violations & leaderboards.", "color": "from-rose-500 to-pink-500" }
+]

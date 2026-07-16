@@ -1,0 +1,55 @@
+[
+  {
+    "label": "Getting Started",
+    "icon": "Rocket",
+    "items": [
+      { "label": "Introduction", "to": "/docs" },
+      { "label": "Installation", "to": "/docs/installation" },
+      { "label": "Bot Features", "to": "/docs/features" },
+      { "label": "Dashboard Guide", "to": "/docs/dashboard" }
+    ]
+  },
+  {
+    "label": "Guides",
+    "icon": "BookOpen",
+    "items": [
+      { "label": "Configuration", "to": "/docs/guides/configuration" },
+      { "label": "Permissions", "to": "/docs/guides/permissions" },
+      { "label": "Moderation", "to": "/docs/guides/moderation" },
+      { "label": "Verification", "to": "/docs/guides/verification" },
+      { "label": "Welcome & Leave", "to": "/docs/guides/welcome" },
+      { "label": "Tickets", "to": "/docs/guides/tickets" },
+      { "label": "Voice", "to": "/docs/guides/voice" },
+      { "label": "Announcements", "to": "/docs/guides/announcements" },
+      { "label": "Invite Tracker", "to": "/docs/guides/invites" },
+      { "label": "Security", "to": "/docs/guides/security" },
+      { "label": "Anti-Raid", "to": "/docs/guides/antiraid" },
+      { "label": "Anti-Spam", "to": "/docs/guides/antispam" },
+      { "label": "Logging", "to": "/docs/guides/logging" },
+      { "label": "Auto Role", "to": "/docs/guides/autorole" },
+      { "label": "Nickname Tag", "to": "/docs/guides/nickname" },
+      { "label": "AutoMod", "to": "/docs/guides/automod" },
+      { "label": "Keyword System", "to": "/docs/guides/keyword" },
+      { "label": "Bot Profile", "to": "/docs/guides/botprofile" }
+    ]
+  },
+  {
+    "label": "Commands",
+    "icon": "Terminal",
+    "items": [
+      { "label": "All Commands", "to": "/docs/commands" }
+    ]
+  },
+  {
+    "label": "Reference",
+    "icon": "FileText",
+    "items": [
+      { "label": "FAQ", "to": "/docs/faq" },
+      { "label": "Troubleshooting", "to": "/docs/troubleshooting" },
+      { "label": "Developer Guide", "to": "/docs/developer" },
+      { "label": "API Reference", "to": "/docs/api" },
+      { "label": "Changelog", "to": "/docs/changelog" },
+      { "label": "Support", "to": "/docs/support" }
+    ]
+  }
+]

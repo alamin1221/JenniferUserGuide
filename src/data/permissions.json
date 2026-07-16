@@ -1,0 +1,13 @@
+[
+  { "name": "Administrator", "risk": "high", "description": "Grants every permission and bypasses channel-specific overrides. Required only for security-critical commands (Anti-Raid, Anti-Spam, Security setup, DM broadcast)." },
+  { "name": "Manage Guild", "risk": "high", "description": "Required for most configuration commands — welcome, verify, invite, logs, keyword, AutoMod, ticket, announce." },
+  { "name": "Manage Roles", "risk": "medium", "description": "Required for auto-role setup and any command that assigns / removes roles." },
+  { "name": "Manage Channels", "risk": "medium", "description": "Required for ticket creation, /vc lock and temp voice setup." },
+  { "name": "Manage Messages", "risk": "medium", "description": "Required for every /purge command and anti-spam warning reset." },
+  { "name": "Moderate Members", "risk": "medium", "description": "Required for timeout-based actions in Anti-Spam and Anti-Raid." },
+  { "name": "Kick Members", "risk": "medium", "description": "Required when Anti-Raid or Anti-Spam action is set to Kick." },
+  { "name": "Ban Members", "risk": "high", "description": "Required when Anti-Raid action is set to Ban." },
+  { "name": "Manage Nicknames", "risk": "low", "description": "Required for /tag commands." },
+  { "name": "Move Members", "risk": "low", "description": "Required for /vc move and /vc kick." },
+  { "name": "Mute Members / Deafen Members", "risk": "low", "description": "Required for /vc mute and /vc deafen." }
+]

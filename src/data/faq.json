@@ -1,0 +1,10 @@
+[
+  { "q": "How do I invite Jennifer to my server?", "a": "Click the Invite button on the home page. Make sure you have the Manage Server permission on the target Discord server." },
+  { "q": "Which permissions does Jennifer need?", "a": "For full functionality we recommend Administrator. If that is not possible, grant: Manage Guild, Manage Roles, Manage Channels, Manage Messages, Kick Members, Ban Members, Moderate Members and Manage Nicknames." },
+  { "q": "Slash commands are not showing up — what should I do?", "a": "Re-invite the bot with the applications.commands scope. If commands are still missing, wait 5–10 minutes for Discord to sync, then restart your Discord client." },
+  { "q": "Can I customize the welcome and leave embeds?", "a": "Yes. Run /welcomesystem welcome edit_embed and /welcomesystem leave edit_embed to fully change title, description, colors, images and thumbnails." },
+  { "q": "How does the Anti-Raid system decide when a raid is happening?", "a": "If more than join_limit members join within join_interval seconds — or accounts younger than min_account_age days join in bulk — Jennifer triggers the configured action and optionally locks the server." },
+  { "q": "Is the bot free?", "a": "Yes — all commands and features are completely free to use." },
+  { "q": "Where is my data stored?", "a": "All configuration is stored securely and is only accessible to your server. Jennifer never shares data between servers." },
+  { "q": "How do I get support?", "a": "Join our Support Server — the link is on every page in the sidebar and footer." }
+]
